@@ -22,12 +22,12 @@ pipeline {
                 sh 'sudo npm init --yes'
             }
         }
-        stage('npm install'){
+        stage('Build App'){
             steps{
                 sh 'sudo npm install express --save'
             }
         }
-        stage('Build App'){
+        stage('Deploy App'){
             steps{
                 sh "sudo cp ./pipeline-jenkins/docker-compose.yml . | sudo cp ./pipeline-jenkins/Dockerfile . | sudo cp ./pipeline-jenkins/server.js . "
                 sh "sudo docker-compose up -d"
