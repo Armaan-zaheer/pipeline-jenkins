@@ -2,11 +2,6 @@ pipeline {
     agent any
     
     stages {
-        stage("Compose Down"){
-            steps {
-                sh 'sudo docker-compose down'
-            }
-        }
         stage('reset workspace'){
             steps {
                 sh 'sudo rm -rf *'
