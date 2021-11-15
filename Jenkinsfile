@@ -17,7 +17,7 @@ pipeline {
               sh 'sudo git clone https://github.com/Armaan-zaheer/pipeline-jenkins.git'
             }
         }
-        stage('Install Dependencies'){
+        stage('Initialize'){
             steps{
                 sh 'sudo npm init --yes'
             }
