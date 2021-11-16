@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('reset workspace'){
             steps {
-                sh 'echo `pwd`'
+                sh 'sudo rm -rf * | echo `pwd`'
             }
         }
         stage('Git clone') {
